@@ -5,16 +5,13 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
-//database layer
-const controlDB = require('./modules/database.js'); //functions for using database
-
 //routes
 const index = require('./routes/index');
 
 const app = express();
 
 
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(__dirname + '/public/favicon.ico')); //i dont even...
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
